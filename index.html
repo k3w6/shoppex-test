@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxHub | Cloud-Scale Evolution</title>
+    <meta name="description" content="The most advanced script system with real-time analytics and global cloud distribution.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mesh-bg"></div>
+    <div class="noise"></div>
+
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                <span>TAXHUB</span>
+            </div>
+            <div class="nav-links">
+                <a href="#loader">Loader</a>
+                <a href="#premium">Premium</a>
+                <a href="https://docs.taxhub.lol" target="_blank">Docs</a>
+                <a href="https://discord.gg/taxhub" class="btn-main btn-outline" style="padding: 0.5rem 1rem;">Discord</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <div class="container">
+                <div class="hero-pill">v2.5 // Cloud Sync Enabled</div>
+                <h1>Scripting. <span>Perfected.</span></h1>
+                <p>Experience the next generation of script management. High-performance, secure, and globally distributed across our C2 network.</p>
+                
+                <div class="cta-group">
+                    <a href="https://ads.luarmor.net/get_key?for=WorkInk-mBRtafcWzmbv" target="_blank" class="btn-main btn-primary">
+                        <i data-lucide="key"></i> Get Free Key
+                    </a>
+                    <a href="#premium" class="btn-main btn-outline">
+                        <i data-lucide="zap"></i> Buy Premium
+                    </a>
+                </div>
+
+                <!-- Terminal Loader -->
+                <div id="loader" class="terminal-card">
+                    <div class="terminal-head">
+                        <div class="terminal-dots">
+                            <div class="terminal-dot" style="background: #ff5f56;"></div>
+                            <div class="terminal-dot" style="background: #ffbd2e;"></div>
+                            <div class="terminal-dot" style="background: #27c93f;"></div>
+                        </div>
+                        <div class="terminal-title">taxhub_loader.lua</div>
+                        <button id="copy-btn" class="btn-copy">
+                            <i data-lucide="copy" style="width: 14px; height: 14px;"></i>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <div class="terminal-body" id="loader-code">loadstring(game:HttpGet("https://taxhub.lol/loader"))()</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="premium" class="reveal" style="animation-delay: 0.2s;">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Premium Modules</h2>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Unlock unrestricted access to our elite-level scripts.</p>
+                </div>
+
+                <div class="pricing-grid" id="product-grid">
+                    <!-- Cards will be populated/updated via app.js & Shoppex -->
+                    
+                    <!-- Typical Keysystem (Stated in old code) -->
+                    <div class="pricing-card" id="card-019d4c76-fff6-7c27-8907-b9ddc54bd2b4">
+                        <div class="card-badge">Popular</div>
+                        <h3>Typical Keysystem</h3>
+                        <div class="price">
+                            <span class="currency">$</span><span class="amount" id="price-019d4c76-fff6-7c27-8907-b9ddc54bd2b4">--</span><span>/lifetime</span>
+                        </div>
+                        <div class="stock-pill">
+                            <div class="stock-indicator"></div>
+                            <span id="stock-019d4c76-fff6-7c27-8907-b9ddc54bd2b4">Stock: Loading...</span>
+                        </div>
+                        <ul class="features-list">
+                            <li><i data-lucide="check-circle"></i> Advanced HWID Lock</li>
+                            <li><i data-lucide="check-circle"></i> Global Cloud Sync</li>
+                            <li><i data-lucide="check-circle"></i> 24/7 Server Uptime</li>
+                            <li><i data-lucide="check-circle"></i> Priority Support</li>
+                        </ul>
+                        <button class="btn-buy-full" onclick="buyProduct('019d4c76-fff6-7c27-8907-b9ddc54bd2b4')">
+                            Purchase Access
+                        </button>
+                    </div>
+
+                    <!-- Sniperduels Autofarm (Stated in old code) -->
+                    <div class="pricing-card featured" id="card-019d4c6e-cf9e-7d2b-a106-bfbf7da597f5">
+                        <div class="card-badge">New</div>
+                        <h3>Sniper Duels Elite</h3>
+                        <div class="price">
+                            <span class="currency">$</span><span class="amount" id="price-019d4c6e-cf9e-7d2b-a106-bfbf7da597f5">--</span><span>/lifetime</span>
+                        </div>
+                        <div class="stock-pill">
+                            <div class="stock-indicator"></div>
+                            <span id="stock-019d4c6e-cf9e-7d2b-a106-bfbf7da597f5">Stock: Loading...</span>
+                        </div>
+                        <ul class="features-list">
+                            <li><i data-lucide="check-circle"></i> Fully Automated Farm</li>
+                            <li><i data-lucide="check-circle"></i> Anti-Detection Logic</li>
+                            <li><i data-lucide="check-circle"></i> Remote Command Sync</li>
+                            <li><i data-lucide="check-circle"></i> Exclusive Member Roles</li>
+                        </ul>
+                        <button class="btn-buy-full" onclick="buyProduct('019d4c6e-cf9e-7d2b-a106-bfbf7da597f5')">
+                            Purchase Access
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TaxHub Cloud Services. Design by Antigravity.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://assets.shoppex.io/sdk.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
